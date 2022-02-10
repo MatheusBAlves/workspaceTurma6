@@ -51,21 +51,34 @@ public class ContaBancaria {
 	
 	// operações Metodos
 	
-	public void deposito(double valor) {
+	public String deposito(double valor) {
 		this.saldo = this.saldo + valor;
+		extrato();
+		return "Operação realizada com Sucesso.!";
 	}
 	
-	public void saque(double valor) {
+	public String saque(double valor) {
 		if ( valor > (this.saldo + this.limiteEspecial)) {
 			System.out.println("Valor indisponivel");
 		} else {
 			this.saldo = this.saldo - valor;
+			extrato();
+			return "Operação realizada com Sucesso.!";
 		}
+		return "Sem Saldo.!";
 	}
 	
 	public void extrato() {
 		System.out.println("Cliente: " + this.cliente + "Conta:" + this.numero + " Limite: "
 								+ this.limiteEspecial + " saldo:" + this.saldo);
+	}
+	
+	public String definirLimite(double valor) {
+		if (this.tipo.equals("corrente")) {
+			this.limiteEspecial = valor;
+			return "Operação realizada com Sucesso.!";
+		}
+		return "Tipo de Conta Invalida.!";
 	}
 	
 	
