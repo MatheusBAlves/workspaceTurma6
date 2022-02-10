@@ -59,13 +59,12 @@ public class ContaBancaria {
 	
 	public String saque(double valor) {
 		if ( valor > (this.saldo + this.limiteEspecial)) {
-			System.out.println("Valor indisponivel");
+			return "Valor indisponivel";
 		} else {
 			this.saldo = this.saldo - valor;
 			extrato();
 			return "Operação realizada com Sucesso.!";
 		}
-		return "Sem Saldo.!";
 	}
 	
 	public void extrato() {
