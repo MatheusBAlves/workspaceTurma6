@@ -24,4 +24,8 @@ public class Input {
 		return false;
 	}
 	
+	public static int inteiro(String msg) {
+		return Integer.parseInt(JOptionPane.showInputDialog(msg));
+	}
+	
 }
