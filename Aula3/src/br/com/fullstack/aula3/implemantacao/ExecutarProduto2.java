@@ -1,8 +1,8 @@
-package implemantacao;
+package br.com.fullstack.aula3.implemantacao;
 
 import javax.swing.JOptionPane;
 
-import beans.Produto;
+import br.com.fullstack.aula3.beans.Produto;
 
 public class ExecutarProduto2 {
 

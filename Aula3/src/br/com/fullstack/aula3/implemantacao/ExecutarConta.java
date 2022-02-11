@@ -1,7 +1,7 @@
-package implemantacao;
+package br.com.fullstack.aula3.implemantacao;
 
-import beans.ContaBancaria;
-import util.Input;
+import br.com.fullstack.aula3.beans.ContaBancaria;
+import br.com.fullstack.aula3.util.Input;
 
 public class ExecutarConta {
 

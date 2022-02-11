@@ -1,4 +1,4 @@
-package beans;
+package br.com.fullstack.aula3.beans;
 
 
 public class Produto {

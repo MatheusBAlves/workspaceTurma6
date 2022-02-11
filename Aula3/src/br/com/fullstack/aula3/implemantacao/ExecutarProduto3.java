@@ -1,7 +1,7 @@
-package implemantacao;
+package br.com.fullstack.aula3.implemantacao;
 
-import beans.Produto;
-import util.Input;
+import br.com.fullstack.aula3.beans.Produto;
+import br.com.fullstack.aula3.util.Input;
 
 public class ExecutarProduto3 {
 	

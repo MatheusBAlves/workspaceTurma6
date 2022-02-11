@@ -1,4 +1,4 @@
-package util;
+package br.com.fullstack.aula3.util;
 
 import javax.swing.JOptionPane;
 
