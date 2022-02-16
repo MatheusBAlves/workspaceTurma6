@@ -1,8 +1,8 @@
 package br.com.fiap.consultorio.beans;
 
-import br.com.fiap.consultorio.interfaces.crud;
+import br.com.fiap.consultorio.interfaces.persistencia;
 
-public abstract class Pessoa implements crud {
+public abstract class Pessoa implements persistencia {
 	private String nome;
 	private String cpf;
 	private String fone;
@@ -34,13 +34,5 @@ public abstract class Pessoa implements crud {
 	public void setFone(String fone) {
 		this.fone = fone;
 	}
-		
-	public void remover() {}
-	//public void alterar() {
-	//	System.out.println("Alterar da class: Pessoa");
-	//}
-	//public void consultar() {}
-		
-	
-	
+
 }

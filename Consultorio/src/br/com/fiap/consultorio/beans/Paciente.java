@@ -8,8 +8,19 @@ public class Paciente extends Pessoa {
 		super(nome, cpf, fone);
 		// TODO Auto-generated constructor stub
 	}
+
+	@Override
+	public void salvar() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void pesquisar() {
+		// TODO Auto-generated method stub
+		
+	}
 	
-	public void adicionar() {}
-	public void pesquisar() {}
+	
 	
 }

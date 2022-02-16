@@ -3,9 +3,11 @@ package br.com.fiap.consultorio.beans;
 import java.util.Date;
 
 public class Funcionario extends Pessoa {
+	private int id;
 	private Date dtadmissao;
 	private Date  dtdemissao;
-	private double salario;
+	protected double salario;
+	private String departamento;
 	
 	public Funcionario () {}
 	
@@ -17,6 +19,32 @@ public class Funcionario extends Pessoa {
 	}
 	
 	
+	public Funcionario(String nome, String cpf, String fone, int id, Date dtadmissao, Date dtdemissao, double salario,
+			String departamento) {
+		super(nome, cpf, fone);
+		this.id = id;
+		this.dtadmissao = dtadmissao;
+		this.dtdemissao = dtdemissao;
+		this.salario = salario;
+		this.departamento = departamento;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getDepartamento() {
+		return departamento;
+	}
+
+	public void setDepartamento(String departamento) {
+		this.departamento = departamento;
+	}
+
 	public Date getDtadmissao() {
 		return dtadmissao;
 	}
@@ -37,11 +65,16 @@ public class Funcionario extends Pessoa {
 	}
 	
 	
-	public void pesquisar(){}
-	public void salvar() {}
-	public void incluir() {};
-	public void demitir() {};
+	public void pesquisar(){
+		System.out.println("Pesquisa dados de Funcionario");
+	}
+	public void salvar() {
+		System.out.println("Salva dados de Funcionario");
+	}
 	
+	public double calcularParticipacaoNosLucros() {
+		return this.salario * 0.2;
+	}
 	
 	
 }

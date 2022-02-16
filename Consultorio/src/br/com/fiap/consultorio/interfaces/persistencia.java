@@ -1,10 +1,8 @@
 package br.com.fiap.consultorio.interfaces;
 
-public interface crud {
+public interface persistencia {
 
-	void incluir();
 	void salvar();
 	void pesquisar();
-	void remover();
 	
 }

@@ -1,5 +1,10 @@
 package br.com.fiap.consultorio.implementacao;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+import javax.swing.JOptionPane;
+
 import br.com.fiap.consultorio.beans.Funcionario;
 import br.com.fiap.consultorio.beans.Medico;
 import br.com.fiap.consultorio.beans.Paciente;
@@ -7,28 +12,21 @@ import br.com.fiap.consultorio.beans.Pessoa;
 
 public class ExecutarAgenda {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		// TODO Auto-generated method stub
+		SimpleDateFormat formatarData = new SimpleDateFormat("dd/MM/yyyy");
+
 		
 		Paciente paciente = new Paciente("Fausto Silva","1345679","998989898");
-		
-		System.out.println(paciente.getNome());
-		paciente.alterar();
-		
-		Medico medico = new Medico("Dr. Fausto","123789789","9999999","Cardiologista","101010");
-		
-		System.out.println(medico.getNome() + " : " + medico.getEspecialidade());
-		medico.alterar();
-		
-		Funcionario fun = new Funcionario();
-		fun.setNome("Funcionario ANA");
-		
-		System.out.println(fun.getNome());
-		
-		
-		//Pessoa p = new Pessoa("MARIO", "12346","989898");
-		//System.err.println(p.getNome());
 
+		Funcionario fun = new Funcionario("Ana Maria","Cpf12346","98989898",formatarData.parse("03/02/2022"), null, 500);
+		
+		Medico medico = new Medico("Dr. Fausto","CPF123789789","9999999",formatarData.parse("16/02/2022"),null,5000,"Cardiologista","101010");
+		
+		JOptionPane.showMessageDialog(null, "Funcionario: " + fun.getNome() + "\n\tSalario: "+ fun.getSalario() + "\n\tParticipação: " + fun.calcularParticipacaoNosLucros());
+		JOptionPane.showMessageDialog(null, "Medico: " + medico.getNome() + " \n\tSalario: " + medico.getSalario() + "\n\tParticipação: " + medico.calcularParticipacaoNosLucros() );
+
+		
 	}
 
 }
