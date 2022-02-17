@@ -76,5 +76,8 @@ public class Funcionario extends Pessoa {
 		return this.salario * 0.2;
 	}
 	
+	public double calcularParticipacaoNosLucros( double valor) {
+		return this.salario * valor;
+	}
 	
 }
