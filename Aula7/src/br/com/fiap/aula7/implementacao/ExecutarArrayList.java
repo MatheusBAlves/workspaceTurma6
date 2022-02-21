@@ -64,10 +64,6 @@ public class ExecutarArrayList {
 		
 		System.out.println("Ordem por Nome: " + listaAlunos);
 		
-
-		
-		
-		
 	}
 
 }

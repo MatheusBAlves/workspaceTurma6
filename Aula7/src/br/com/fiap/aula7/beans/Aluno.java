@@ -53,7 +53,6 @@ public class Aluno implements Comparable<Aluno> {
 	public String toString() {
 		//return "Aluno [nome=" + nome + ", media=" + media + ", faltas=" + faltas + ", idade=" + idade + "]";
 		return "[nome=" + nome + ", idade=" + idade + "]";
-
 	}
 
 	@Override
