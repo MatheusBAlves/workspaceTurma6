@@ -1,9 +1,9 @@
-package br.com.fiap.aula10.dao;
+package br.com.fiap.aula10.daoController;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.fiap.aula10.beans.Veiculo;
+import br.com.fiap.aula10.beansModel.Veiculo;
 
 public class VeiculoDao {
 
@@ -48,10 +48,10 @@ public class VeiculoDao {
 		return false;
 	}
 
-	public Veiculo consultarPorPlaca(String placa) {
+	public Veiculo consultarPorPlaca(String placa) throws Exception {
 		if (!ConectarBD("url teste")) {
 			System.out.println("Erro no BD");
-			return null;
+			throw new Exception("Erro de conexão no BD..!");
 		}
 
 		for (Veiculo elemento : bancoDeVeiculos) {
